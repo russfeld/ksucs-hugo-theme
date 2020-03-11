@@ -44,18 +44,26 @@
               {{if not .IsHome}}
               <div>
                 <div id="top-bar">
+                  <div id="top-github-link">
+                    <a class="github-link" title='Tele' href="tele.html" target="blank">
+                      <i class="fas fa-tv"></i>
+                      <span id="top-github-link-text">Tele</span>
+                    </a>
+                    <a class="github-link" title='Embed' href="embed.html" target="blank">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                      <span id="top-github-link-text">Embed</span>
+                    </a>
                 {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
-                  <div id="top-github-link">
                     <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
                     </a>
-                  </div>
                   {{ end }}
                 {{ end }}
+                  </div>
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -84,7 +92,9 @@
         <div id="head-tags">
         {{ partial "tags.html" . }}
         </div>
-        {{ if .Params.chapter }}
+        {{ if .Params.section }}
+          <div id="section">
+        {{ else if .Params.chapter }}
           <div id="chapter">
         {{ end }}
         <div id="body-inner">
