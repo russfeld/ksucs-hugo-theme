@@ -24,17 +24,17 @@ body {
 body #chapter h1 {
     font-size: 3.5rem;
 }
-@media only all and (min-width: 48em) and (max-width: 59.938em) {
+@media only all and (min-width: 780px) and (max-width: 1400px) {
     body #chapter h1 {
         font-size: 3rem;
     }
 
     body{
-      margin-left: 75px;
-      margin-right: 75px;
+      margin-left: 25px;
+      margin-right: 25px;
     }
 }
-@media only all and (max-width: 47.938em) {
+@media only all and (max-width: 779px) {
     body #chapter h1 {
         font-size: 2rem;
     }
