@@ -15,11 +15,9 @@ See below for the original README information from [Hugo Theme Learn](https://le
 
 ---
 
-# K-State Computer Science - Sample Site
+# Sample Site
 
-If you have access to the [K-State Computer Science GitLab](https://gitlab.cs.ksu.edu/) server, you can clone a [sample site](https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo) that is already preconfigured to use this template. 
-
-If you are not in K-State Computer Science, contact the author for an exported version of this repository. 
+You can clone a [sample site](https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo) that is already preconfigured to use this template. 
 
 ---
 
