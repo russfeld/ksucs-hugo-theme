@@ -1,5 +1,7 @@
 # K-State CS Hugo Theme
 
+## [DEMO SITE](https://ksucs-hugo.russfeld.me/)
+
 This is an adaptation of [Hugo Theme Learn](https://learn.netlify.com/en/) that has been customized for use by K-State Computer Science to build online textbooks. It contains some featuers that are unique to our use case, but they may be useful to others.
 
 Some unique features to this theme:
