@@ -1,5 +1,7 @@
 # K-State CS Hugo Theme
 
+## [DEMO SITE](https://ksucs-hugo.russfeld.me/)
+
 This is an adaptation of [Hugo Theme Learn](https://learn.netlify.com/en/) that has been customized for use by K-State Computer Science to build online textbooks. It contains some featuers that are unique to our use case, but they may be useful to others.
 
 Some unique features to this theme:
@@ -10,6 +12,29 @@ Some unique features to this theme:
   * The teleprompter pages include auto-scroll capabilities. It is compatible with an [IKAN Teleprompter Remote](https://ikancorp.com/shop/teleprompters/tablet-teleprompters-accessories/ikan-elite-remote-bluetooth-teleprompter-remote-for-pt-elite-prompters/), but can be controlled using the number keys or easily customized. See /static/js/tele-scroll.js for details.
 
 See below for the original README information from [Hugo Theme Learn](https://learn.netlify.com/en/).
+
+---
+
+# Sample Site
+
+You can clone a [sample site](https://gitlab.cs.ksu.edu/russfeld/ksucs-hugo) that is already preconfigured to use this template. 
+
+---
+
+# Quick Start Guide
+
+This is a quick start guide for using this theme within a new Hugo website. 
+
+1. [Install Hugo](https://gohugo.io/getting-started/installing/) using the method of your choice. You will need a version of Hugo at 0.60 or later.
+  1. I prefer to use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) on Windows 10 coupled with [Visual Studio Code](https://code.visualstudio.com/) and the [WSL Extension](https://code.visualstudio.com/docs/remote/wsl). This allows native editing coupled with a Linux terminal. 
+  1. On WSL, I usually download the .deb package from [Hugo Releases](https://github.com/gohugoio/hugo/releases) and install it using `sudo dpkg -i <.deb file>`
+2. Use Hugo to create a new site. See the [Hugo Quick Start Guide](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). 
+  1. `hugo new site <website name>`
+3. Install this repository as the theme. See the [Hugo Quick Start Guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme). 
+  1. I recommend using Git submodules as directed in the Quick Start Guide. This allows you to pull updated versions of this template onto your site. 
+  1. `git init`
+  1. `git submodule add https://github.com/russfeld/ksucs-hugo-theme.git`
+4. Copy the contents of `config.toml.sample` in this repository to your `config.toml` file in the root of your Hugo website, and edit accordingly. 
 
 ---
 
