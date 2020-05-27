@@ -589,11 +589,21 @@ div.notices.note p:first-child:after {
 div.notices.tip {
     background: #E6F9E6;
 }
-div.notices.tip p:fist-child {
+div.notices.tip p:first-child {
     border-top: 30px solid rgba(92, 184, 92, 0.8);
 }
 div.notices.tip p:first-child:after {
     content: 'Tip';
+}
+
+div.notices.noiframe {
+    background: #EDE5FE;
+}
+div.notices.noiframe p:first-child {
+    border-top: 30px solid #9074B5;
+}
+div.notices.noiframe p:first-child:after {
+    content: 'Web Only';
 }
 
 /* attachments shortcode */
