@@ -503,7 +503,7 @@ h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     font-weight: 400;
-    letter-spacing: -1px;
+    /* letter-spacing: -1px; */
 }
 h1 {
     /* font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; */
