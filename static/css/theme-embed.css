@@ -484,6 +484,9 @@ div.notices p {
     margin-bottom: 0rem;
     color: #666;
 }
+div.notices pre {
+  margin: 0 1rem;
+}
 div.notices p:first-child:before {
     position: absolute;
     top: 2px;
@@ -499,30 +502,38 @@ div.notices p:first-child:after {
     color: #fff;
     left: 2rem;
 }
-div.notices.info p {
-    border-top: 30px solid #F0B37E;
+div.notices.info {
     background: #FFF2DB;
+}
+div.notices.info p:first-child {
+  border-top: 30px solid #F0B37E;
 }
 div.notices.info p:first-child:after {
     content: 'Info';
 }
-div.notices.warning p {
-    border-top: 30px solid rgba(217, 83, 79, 0.8);
+div.notices.warning {
     background: #FAE2E2;
+}
+div.notices.warning p:first-child {
+    border-top: 30px solid rgba(217, 83, 79, 0.8);
 }
 div.notices.warning p:first-child:after {
     content: 'Warning';
 }
-div.notices.note p {
-    border-top: 30px solid #6AB0DE;
+div.notices.note {
     background: #E7F2FA;
+}
+div.notices.note p:first-child {
+    border-top: 30px solid #6AB0DE;
 }
 div.notices.note p:first-child:after {
     content: 'Note';
 }
-div.notices.tip p {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
+div.notices.tip {
     background: #E6F9E6;
+}
+div.notices.tip p:first-child {
+    border-top: 30px solid rgba(92, 184, 92, 0.8);
 }
 div.notices.tip p:first-child:after {
     content: 'Tip';
