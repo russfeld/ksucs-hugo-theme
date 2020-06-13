@@ -97,6 +97,13 @@ var onDocumentKeyDown = function( event ) {
       }
       autoScroll = 0;
       break;
+    case 77:
+      $('#body').toggleClass('mirror');
+      if($('#body').hasClass('mirror')){
+          localStorage.setItem('mirror', 'mirror');
+      }else{
+          localStorage.removeItem('mirror');
+      }
   }
 }
 
@@ -129,6 +136,11 @@ var onDocumentMouseClick = function( event ) {
 jQuery(document).ready(function() {
   document.addEventListener( 'keydown', onDocumentKeyDown, false );
   document.addEventListener( 'click', onDocumentMouseClick, false);
+
+  var mirror = localStorage.getItem('mirror');
+    if(mirror !== ''){
+        $('#body').addClass(mirror);
+    }
 });
 
 // https://stackoverflow.com/questions/45270497/slowly-scroll-down-a-page-permanently-without-heavy-cpu-usage-or-laggy-scrolling
