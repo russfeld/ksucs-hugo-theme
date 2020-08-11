@@ -105,10 +105,16 @@
         {{if .Params.alwaysopen}}parent{{end}}
         ">
       <a href="{{.RelPermalink}}">
+        {{if or (.IsAncestor $currentNode) (eq .File.UniqueID $currentFileUniqueID)}}
+        <i class="fas fa-angle-down fa-fw"></i>
+        {{else}}
+        <i class="fas fa-angle-right fa-fw"></i>
+        {{end}}
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
             <i class="fas fa-check read-icon"></i>
           {{ end }}
+
       </a>
     {{ if .IsAncestor $currentNode }}
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
@@ -143,6 +149,7 @@
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
         </a>
