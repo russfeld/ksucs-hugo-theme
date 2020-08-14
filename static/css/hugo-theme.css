@@ -252,3 +252,11 @@ figcaption h4 {
 .is-sticky #top-bar {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); 
 }
+
+/* Mathjax Support */
+code.has-jax {
+  -webkit-font-smoothing: antialiased;
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
+}
