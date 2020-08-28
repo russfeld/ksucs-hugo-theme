@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+<a href="{{ .Get "url" }}" target="_blank">{{ .Get ".url" }}</a>
+{{ else }}
+<a href="{{ .Get 0 }}" target="_blank">{{ .Get 0 }}</a>
+{{ end }}
