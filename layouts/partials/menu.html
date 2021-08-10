@@ -125,12 +125,9 @@
           {{ end }}
 
       </a>
-<<<<<<< HEAD
     {{ if .IsAncestor $currentNode }}
-      {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-=======
+      <!-- {{ $numberOfPages := (add (len .Pages) (len .Sections)) }} -->
       {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
->>>>>>> d198cbe65f064575df1ab02415980d6e44363bf9
       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}
