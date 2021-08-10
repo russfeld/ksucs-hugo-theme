@@ -1165,7 +1165,7 @@ pre .copy-to-clipboard {
     border-radius: 2px;
 }
 pre .copy-to-clipboard:hover {
-    background-color: #656c72;
+    background-color: #00bdf3;
     color: #fff;
 }
 .parent-element {
@@ -1208,6 +1208,13 @@ pre .copy-to-clipboard:hover {
     color: white ;
     margin-top:1rem;
     padding-left: 1rem;
+}
+
+#homelinks {
+  background-color: #9c6fb6;
+  color: #fff;
+  padding: 7px 0;
+  border-bottom: 4px solid #9c6fb6;
 }
 
 #searchResults {
