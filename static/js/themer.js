@@ -1,9 +1,9 @@
 //russfeld deal with themes
 var updateThemeLink = function(){
   if($('body').hasClass('dark')){
-    $('#themelink').html('<i class="fas fa-sun"></i><span id="top-github-link-text">Light</span>');
+    $('#themelink').html('<i class="fas fa-sun"></i><span id="top-github-link-text"></span>');
   }else{
-    $('#themelink').html('<i class="fas fa-moon"></i><span id="top-github-link-text">Dark</span>');
+    $('#themelink').html('<i class="fas fa-moon"></i><span id="top-github-link-text"></span>');
   }
 }
 

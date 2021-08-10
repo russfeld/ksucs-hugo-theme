@@ -197,4 +197,9 @@ a:hover {
     background: #1d1f21;;
 }
 
+#homelinks {
+    background: var(--MENU-HEADER-BG-color);
+    background-color: var(--MENU-HEADER-BORDER-color);
+    border-bottom-color: var(--MENU-HEADER-BORDER-color);
+}
   

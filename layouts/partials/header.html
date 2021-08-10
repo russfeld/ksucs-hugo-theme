@@ -51,17 +51,17 @@
               <div>
                 <div id="top-bar">
                   <div id="top-github-link">
-                    <a id="themelink" class="github-link" title='theme' href="#">
+                    <a id="themelink" class="github-link" title='Toggle Light or Dark Mode' href="#">
                       <i class="fas fa-moon"></i>
-                      <span id="top-github-link-text">Dark</span>
+                      <span id="top-github-link-text"></span>
                     </a>
-                    <a class="github-link" title='Tele' href="tele.html" target="blank">
+                    <a class="github-link" title='Teleprompter View' href="tele.html" target="blank">
                       <i class="fas fa-tv"></i>
-                      <span id="top-github-link-text">Tele</span>
+                      <span id="top-github-link-text"></span>
                     </a>
-                    <a class="github-link" title='Embed' href="embed.html" target="blank">
+                    <a class="github-link" title='Embed this page' href="embed.html" target="blank">
                       <i class="fas fa-expand-arrows-alt"></i>
-                      <span id="top-github-link-text">Embed</span>
+                      <span id="top-github-link-text"></span>
                     </a>
                 {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
                   {{ $File := .File }}
@@ -69,7 +69,7 @@
                   {{with $File.Path }}
                     <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
                       <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
+                      <span id="top-github-link-text"></span>
                     </a>
                   {{ end }}
                 {{ end }}

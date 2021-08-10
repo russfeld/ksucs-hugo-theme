@@ -153,11 +153,8 @@
         {{end}}
         </ul>
       {{ end }}
-<<<<<<< HEAD
-    {{ end }}        
-=======
->>>>>>> d198cbe65f064575df1ab02415980d6e44363bf9
     </li>
+    {{ end }}
   {{else}}
     {{ if not .Params.Hidden }}
       <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}">

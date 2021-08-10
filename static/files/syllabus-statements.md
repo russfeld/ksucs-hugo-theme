@@ -1,8 +1,8 @@
-{{% notice info %}}
+## Standard Syllabus Statements
 
-The statements below are standard syllabus statements from K-State and our program.
-
-{{% /notice %}}
+<div class="notices info">
+    <p>The statements below are standard syllabus statements from K-State and our program.</p>
+</div>
 
 ### Academic Honesty
 
@@ -30,9 +30,9 @@ If you feel uncomfortable because of comments or behavior encountered in this cl
 
 ### Netiquette
 
-{{% notice note %}}
-This is our personal policy and not a required syllabus statement from K-State. It has been adapted from [this statement](https://global.k-state.edu/students/courses/netiquette/) from K-State Global Campus, and the [Recurse Center Manual](https://www.recurse.com/manual). We have adapted their ideas to fit this course.
-{{% /notice %}}
+<div class="notices info">
+    <p>This is our personal policy and not a required syllabus statement from K-State. It has been adapted from <a href="https://global.k-state.edu/students/courses/netiquette/">this statement</a> from K-State Global Campus, and the <a href="https://www.recurse.com/manual">Recurse Center Manual</a>. We have adapted their ideas to fit this course.</p>
+</div>
 
 Online communication is inherently different than in-person communication. When speaking in person, many times we can take advantage of the _context_ and _body language_ of the person speaking to better understand what the speaker _means_, not just what is said. This information is not present when communicating online, so we must be much more careful about what we say and how we say it in order to get our meaning across.
 
