@@ -532,77 +532,116 @@ blockquote cite {
 div.notices {
     margin: 2rem 0;
     position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 div.notices p {
-    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 0px;
     display: block;
     font-size: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
     color: #666;
+}
+div.notices blockquote {
+    border-left: 10px solid darkgray;
+}
+div.notices h1 {
+    font-size: 2.5rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
+}
+div.notices h2 {
+    font-size: 2.2rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
+}
+div.notices h3 {
+    font-size: 1.9rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
+}
+div.notices h4 {
+    font-size: 1.7rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
+}
+div.notices h5 {
+    font-size: 1.5rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
+}
+div.notices h6 {
+    font-size: 1.3rem;
+    margin: 15px 0 15px 0;
+    line-height: 1.2;
 }
 div.notices pre {
     margin: 0 1rem;
 }
-div.notices p:first-child:before {
+div.notices > p:first-child:before {
     position: absolute;
-    top: 2px;
+    top: -28px;
     color: #fff;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f06a";
     left: 10px;
 }
-div.notices p:first-child:after {
+div.notices > p:first-child:after {
     position: absolute;
-    top: 2px;
+    top: -28px;
     color: #fff;
     left: 2rem;
 }
 div.notices.info {
+    border-top: 30px solid #F0B37E;
     background: #FFF2DB;
 }
-div.notices.info p:first-child {
-    border-top: 30px solid #F0B37E;
+div.notices.info > p:first-child {
+    /* border-top: 30px solid #F0B37E; */
 }
-div.notices.info p:first-child:after {
+div.notices.info > p:first-child:after {
     content: 'Info';
 }
 div.notices.warning {
+    border-top: 30px solid rgba(217, 83, 79, 0.8);
     background: #FAE2E2;
 }
-div.notices.warning p:first-child {
-    border-top: 30px solid rgba(217, 83, 79, 0.8);
+div.notices.warning > p:first-child {
+    /* border-top: 30px solid rgba(217, 83, 79, 0.8); */
 }
-div.notices.warning p:first-child:after {
+div.notices.warning > p:first-child:after {
     content: 'Warning';
 }
 div.notices.note {
+    border-top: 30px solid #6AB0DE;
     background: #E7F2FA;
 }
-div.notices.note p:first-child {
-    border-top: 30px solid #6AB0DE;
+div.notices.note > p:first-child {
+    /* border-top: 30px solid #6AB0DE; */
 }
-div.notices.note p:first-child:after {
+div.notices.note > p:first-child:after {
     content: 'Note';
 }
 div.notices.tip {
+    border-top: 30px solid rgba(92, 184, 92, 0.8);
     background: #E6F9E6;
 }
-div.notices.tip p:first-child {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
+div.notices.tip > p:first-child {
+    /* border-top: 30px solid rgba(92, 184, 92, 0.8); */
 }
-div.notices.tip p:first-child:after {
+div.notices.tip > p:first-child:after {
     content: 'Tip';
 }
-
 div.notices.noiframe {
+    border-top: 30px solid #9074B5;
     background: #EDE5FE;
 }
-div.notices.noiframe p:first-child {
-    border-top: 30px solid #9074B5;
+div.notices.noiframe > p:first-child {
+    /* border-top: 30px solid #9074B5; */
 }
-div.notices.noiframe p:first-child:after {
+div.notices.noiframe > p:first-child:after {
     content: 'Web Only';
 }
 
@@ -1078,7 +1117,9 @@ td {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    width: 74%;
     display: block;
+    float: left;
 }
 #body #breadcrumbs span {
     padding: 0 0.1rem;
@@ -1163,7 +1204,7 @@ pre .copy-to-clipboard {
     border-radius: 2px;
 }
 pre .copy-to-clipboard:hover {
-    background-color: #00bdf3;
+    background-color: #656c72;
     color: #fff;
 }
 .parent-element {
@@ -1206,13 +1247,6 @@ pre .copy-to-clipboard:hover {
     color: white ;
     margin-top:1rem;
     padding-left: 1rem;
-}
-
-#homelinks {
-  background-color: #9c6fb6;
-  color: #fff;
-  padding: 7px 0;
-  border-bottom: 4px solid #9c6fb6;
 }
 
 #searchResults {
