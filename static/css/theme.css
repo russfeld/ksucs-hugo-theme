@@ -581,18 +581,19 @@ div.notices pre {
 }
 div.notices > p:first-child:before {
     position: absolute;
-    top: -28px;
     color: #fff;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f06a";
-    left: 10px;
+    left: -1.5rem;
 }
-div.notices > p:first-child:after {
+div.notices > p:first-child {
     position: absolute;
     top: -28px;
     color: #fff;
     left: 2rem;
+    padding: 0px; 
+    margin: 0px;
 }
 div.notices.info {
     border-top: 30px solid #F0B37E;
@@ -602,7 +603,7 @@ div.notices.info > p:first-child {
     /* border-top: 30px solid #F0B37E; */
 }
 div.notices.info > p:first-child:after {
-    content: 'Info';
+    /* content: 'Info'; */
 }
 div.notices.warning {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
@@ -612,7 +613,7 @@ div.notices.warning > p:first-child {
     /* border-top: 30px solid rgba(217, 83, 79, 0.8); */
 }
 div.notices.warning > p:first-child:after {
-    content: 'Warning';
+    /* content: 'Warning'; */
 }
 div.notices.note {
     border-top: 30px solid #6AB0DE;
@@ -622,7 +623,7 @@ div.notices.note > p:first-child {
     /* border-top: 30px solid #6AB0DE; */
 }
 div.notices.note > p:first-child:after {
-    content: 'Note';
+    /* content: 'Note'; */
 }
 div.notices.tip {
     border-top: 30px solid rgba(92, 184, 92, 0.8);
@@ -632,7 +633,7 @@ div.notices.tip > p:first-child {
     /* border-top: 30px solid rgba(92, 184, 92, 0.8); */
 }
 div.notices.tip > p:first-child:after {
-    content: 'Tip';
+    /* content: 'Tip'; */
 }
 div.notices.noiframe {
     border-top: 30px solid #9074B5;
@@ -642,7 +643,7 @@ div.notices.noiframe > p:first-child {
     /* border-top: 30px solid #9074B5; */
 }
 div.notices.noiframe > p:first-child:after {
-    content: 'Web Only';
+    /* content: 'Web Only'; */
 }
 
 /* attachments shortcode */
