@@ -584,7 +584,7 @@ div.notices > p:first-child:before {
     color: #fff;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f06a";
+    /* content: "\f06a"; */
     left: -1.5rem;
 }
 div.notices > p:first-child {
@@ -605,6 +605,9 @@ div.notices.info > p:first-child {
 div.notices.info > p:first-child:after {
     /* content: 'Info'; */
 }
+div.notices.info > p:first-child:before {
+    content: "\f059";
+}
 div.notices.warning {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
     background: #FAE2E2;
@@ -614,6 +617,9 @@ div.notices.warning > p:first-child {
 }
 div.notices.warning > p:first-child:after {
     /* content: 'Warning'; */
+}
+div.notices.warning > p:first-child:before {
+    content: "\f06a";
 }
 div.notices.note {
     border-top: 30px solid #6AB0DE;
@@ -625,6 +631,9 @@ div.notices.note > p:first-child {
 div.notices.note > p:first-child:after {
     /* content: 'Note'; */
 }
+div.notices.note > p:first-child:before {
+    content: "\f05a";
+}
 div.notices.tip {
     border-top: 30px solid rgba(92, 184, 92, 0.8);
     background: #E6F9E6;
@@ -635,6 +644,9 @@ div.notices.tip > p:first-child {
 div.notices.tip > p:first-child:after {
     /* content: 'Tip'; */
 }
+div.notices.tip > p:first-child:before {
+    content: "\f058";
+}
 div.notices.noiframe {
     border-top: 30px solid #9074B5;
     background: #EDE5FE;
@@ -644,6 +656,9 @@ div.notices.noiframe > p:first-child {
 }
 div.notices.noiframe > p:first-child:after {
     /* content: 'Web Only'; */
+}
+div.notices.noiframe > p:first-child:before {
+    content: "\f057";
 }
 
 /* attachments shortcode */
