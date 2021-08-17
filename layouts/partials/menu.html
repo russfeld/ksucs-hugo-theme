@@ -114,10 +114,15 @@
         {{if .Params.alwaysopen}}parent{{end}}
         ">
       <a href="{{.RelPermalink}}">
-        {{if or (.IsAncestor $currentNode) (eq .File.UniqueID $currentFileUniqueID)}}
-        <i class="fas fa-angle-down fa-fw"></i>
+        {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
+        {{ if ne $numberOfPages 0 }}
+          {{if or (.IsAncestor $currentNode) (eq .File.UniqueID $currentFileUniqueID)}}
+          <i class="fas fa-angle-down fa-fw"></i>
+          {{else}}
+          <i class="fas fa-angle-right fa-fw"></i>
+          {{end}}
         {{else}}
-        <i class="fas fa-angle-right fa-fw"></i>
+          <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
         {{end}}
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}

@@ -128,7 +128,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     fill: #fff;
 }
 .searchbox {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     position: relative;
     border: 1px solid #915eae;
     background: #764890;
@@ -276,7 +276,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 #sidebar ul.topics > li > a {
     line-height: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 #sidebar ul.topics > li > a b {
     opacity: 0.5;
@@ -317,7 +317,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     display: block;
 }
 #sidebar ul li > a {
-    padding: 4px 0;
+    padding: 2px 0;
 }
 #sidebar ul li.visited > a .read-icon {
     color: #9c6fb6;
@@ -1277,5 +1277,9 @@ kbd {
     text-shadow:0 1px 0 #fff;
     line-height:1.4;
     white-space:nowrap;
+  }
+
+  #homelinks {
+      padding-bottom: 4px;
   }
   /* russfeld */
