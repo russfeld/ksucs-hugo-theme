@@ -10,6 +10,6 @@
 {{ if .Site.Params.linenumbers }}
 <script src="{{"js/highlightjs-line-numbers.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script>hljs.initLineNumbersOnLoad({
-    singleLine: true
+    singleLine: false
 });</script>
 {{ end }}
