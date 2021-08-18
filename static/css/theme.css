@@ -578,6 +578,7 @@ div.notices h6 {
 }
 div.notices pre {
     margin: 0 1rem;
+    margin-top: 15px;
 }
 div.notices > p:first-child:before {
     position: absolute;
