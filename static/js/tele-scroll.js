@@ -100,9 +100,9 @@ var onDocumentKeyDown = function( event ) {
     case 77:
       $('#body').toggleClass('mirror');
       if($('#body').hasClass('mirror')){
-          localStorage.setItem('mirror', 'mirror');
+        localStorage.setItem('mirror', 'on');
       }else{
-          localStorage.removeItem('mirror');
+        localStorage.setItem('mirror', 'off');
       }
   }
 }
@@ -138,8 +138,12 @@ jQuery(document).ready(function() {
   document.addEventListener( 'click', onDocumentMouseClick, false);
 
   var mirror = localStorage.getItem('mirror');
-    if(mirror !== ''){
-        $('#body').addClass(mirror);
+    if(mirror == "on"){
+        $('#body').addClass('mirror');
+    } else if (mirror == "off"){
+      $('#body').removeClass('mirror');
+    } else {
+      $('#body').addClass('mirror');
     }
 });
 
