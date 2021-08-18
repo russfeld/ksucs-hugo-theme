@@ -7,3 +7,9 @@
 <script src="{{"js/sjcl.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script src="{{"js/encrypt.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
 {{ end }}
+{{ if .Site.Params.linenumbers }}
+<script src="{{"js/highlightjs-line-numbers.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script>hljs.initLineNumbersOnLoad({
+    singleLine: true
+});</script>
+{{ end }}
