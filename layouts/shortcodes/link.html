@@ -1,5 +1,5 @@
 {{ if .IsNamedParams }}
 <a href="{{ .Get "url" }}" target="_blank">{{ .Get ".url" }}</a>
 {{ else }}
-<a href="{{ .Get 0 }}" target="_blank">{{ .Get 0 }}</a>
+<a href="{{ .Get 0 }}" target="_blank">{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}{{ .Get 0 }}{{ end }}</a>
 {{ end }}
