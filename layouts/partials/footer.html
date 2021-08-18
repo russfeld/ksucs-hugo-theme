@@ -83,6 +83,22 @@
         </script>
     {{ end }}
 
+    {{ if eq ($.Scratch.Get "output-tele") "tele" }}
+        <script src="{{"js/tele-scroll.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+        <script src="{{"js/hideyt.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    {{ end }}
+
+    {{ if (.HasShortcode "encrypt") }}
+    <script src="{{"js/sjcl.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    <script src="{{"js/encrypt.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    {{ end }}
+    {{ if (or .Site.Params.linenumbers .Params.linenumbers) }}
+    <script src="{{"js/highlightjs-line-numbers.min.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+    <script>hljs.initLineNumbersOnLoad({
+        singleLine: false
+    });</script>
+    {{ end }}
+
     {{ partial "custom-footer.html" . }}
   </body>
 </html>

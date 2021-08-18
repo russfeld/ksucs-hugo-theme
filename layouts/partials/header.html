@@ -25,6 +25,12 @@
     {{ range .Site.Params.custom_css -}}
     <link href="{{(printf "%s" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{- end }}
+    {{ if eq ($.Scratch.Get "output-iframe") "iframe" }}
+      <link href="{{"css/theme-iframe.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    {{ end }}
+    {{ if eq ($.Scratch.Get "output-tele") "tele" }}
+      <link href="{{"css/theme-tele.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+    {{ end }}
 
     <script src="{{"js/jquery-3.3.1.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
 
@@ -38,6 +44,7 @@
         }
       {{ end }}
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     {{ partial "custom-header.html" . }}
     {{ template "_internal/google_analytics.html" . }} 
     {{ partial "mathjax_support.html" . }}
@@ -108,7 +115,7 @@
           <div id="chapter">
         {{ end }}
         <div id="body-inner">
-          {{if and (not .IsHome) (not .Params.chapter) }}
+          {{if and (and (not .IsHome) (not .Params.chapter)) (not (eq ($.Scratch.Get "output-iframe") "iframe")) }}
             <h1>
               {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
                 {{.Data.Singular}} ::

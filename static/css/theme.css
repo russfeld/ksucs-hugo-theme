@@ -595,6 +595,7 @@ div.notices > p:first-child {
     left: 2rem;
     padding: 0px; 
     margin: 0px;
+    user-select: none;
 }
 div.notices.info {
     border-top: 30px solid #F0B37E;

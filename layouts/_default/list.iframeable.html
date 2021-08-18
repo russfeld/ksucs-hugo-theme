@@ -1,8 +1,22 @@
-{{/* Custom Template for Embedable Content */}}
+{{/* https://discourse.gohugo.io/t/solved-current-output-format/9458/5 */}}
 
-{{ partial "header.iframeable.html" . }}
+{{ .Scratch.Set "output-iframe" "iframe" }}
 
-{{ .Content }}
+{{/* below should be same content as list.html */}}
+
+{{ partial "header.html" . }}
+
+{{ if eq .Kind "section" }}
+	{{ .Content }}
+{{end}}
+
+{{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+<ul>
+	{{ range .Pages }}
+		<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+	{{ end }}
+</ul>
+{{end}}
 
 <footer class=" footline" >
 	{{with .Params.LastModifierDisplayName}}
@@ -11,4 +25,8 @@
 	{{end}}
 </footer>
 
-{{ partial "footer.iframeable.html" . }}
+{{ partial "footer.html" . }}
+
+{{/* end list.html */}}
+
+{{ .Scratch.Delete "output-iframe" }}

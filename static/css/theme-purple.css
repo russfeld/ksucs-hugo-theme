@@ -143,28 +143,31 @@ a:hover {
     text-decoration: none !important;
 }
 
-.dark div.notices.info p {
-    border-top: 30px solid #F0B37E;
+.dark div.notices.info {
     background: #524D46;
 }
 
-.dark div.notices.warning p {
-    border-top: 30px solid rgba(217, 83, 79, 0.8);
+.dark div.notices.warning {
     background: #524A4A;
 }
 
-.dark div.notices.note p {
-    border-top: 30px solid #6AB0DE;
+.dark div.notices.note {
     background: #505457;
 }
 
-.dark div.notices.tip p {
-    border-top: 30px solid rgba(92, 184, 92, 0.8);
+.dark div.notices.tip {
     background: #505750;
 }
 
 .dark div.notices p {
     color: var(--MAIN-TEXT-color) !important;
+}
+
+.dark div.notices > p:first-child:before {
+    color: #222 !important;
+}
+.dark div.notices > p:first-child {
+    color: #222 !important;
 }
 
 .dark code {
@@ -203,3 +206,14 @@ a:hover {
     border-bottom-color: var(--MENU-HEADER-BORDER-color);
 }
   
+.dark > #body .tab-nav-button.active {
+    color: #fff !important;
+    background-color: #9e9e9e !important;
+    border-color: #9e9e9e !important;
+}
+
+.dark > #body .tab-nav-button {
+    color: #CCC !important;
+    background-color: #333 !important;
+    border-color: #555 !important;
+}
