@@ -1,6 +1,7 @@
 ## Standard Syllabus Statements
 
 <div class="notices info">
+    <p>Info</p>
     <p>The statements below are standard syllabus statements from K-State and our program.</p>
 </div>
 
@@ -31,6 +32,7 @@ If you feel uncomfortable because of comments or behavior encountered in this cl
 ### Netiquette
 
 <div class="notices info">
+    <p>Info</p>
     <p>This is our personal policy and not a required syllabus statement from K-State. It has been adapted from <a href="https://global.k-state.edu/students/courses/netiquette/">this statement</a> from K-State Global Campus, and the <a href="https://www.recurse.com/manual">Recurse Center Manual</a>. We have adapted their ideas to fit this course.</p>
 </div>
 
