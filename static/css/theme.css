@@ -1280,6 +1280,8 @@ option {
 }
 
 /* russfeld */
+
+
 kbd {
     padding:0.1em 0.6em;
     border:1px solid #ccc;
@@ -1332,6 +1334,15 @@ kbd {
 .hljs-ln-code {
     padding-left: 10px !important;
     border: none;
+}
+
+/* fix color of ol and ul in notices */
+div.notices ul, div.notices ol {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    display: block;
+    font-size: 1rem;
+    color: #666;
 }
 
   /* russfeld */
