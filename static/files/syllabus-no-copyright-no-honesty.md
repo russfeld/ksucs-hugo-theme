@@ -5,14 +5,6 @@
     <p>The statements below are standard syllabus statements from K-State and our program.</p>
 </div>
 
-### Academic Honesty
-
-Kansas State University has an Honor and Integrity System based on personal integrity, which is presumed to be sufficient assurance that, in academic matters, one's work is performed honestly and without unauthorized assistance. Undergraduate and graduate students, by registration, acknowledge the jurisdiction of the Honor and Integrity System. The policies and procedures of the [Honor and Integrity System](https://www.k-state.edu/honor/) apply to all full and part-time students enrolled in undergraduate and graduate courses on-campus, off-campus, and via distance learning. A component vital to the Honor and Integrity System is the inclusion of the Honor Pledge which applies to all assignments, examinations, or other course work undertaken by students. The Honor Pledge is implied, whether or not it is stated: "On my honor, as a student, I have neither given nor received unauthorized aid on this academic work." A grade of XF can result from a breach of academic honesty. The F indicates failure in the course; the X indicates the reason is an Honor Pledge violation.
-
-**For this course, a violation of the Honor Pledge will result in sanctions such as a 0 on the assignment or an XF in the course, depending on severity. Actively seeking unauthorized aid, such as posting lab assignments on sites such as Chegg or StackOverflow or asking another person to complete your work, even if unsuccessful, will result in an immediate XF in the course.**
-
-The Codio platform can perform automatic plagiarism detection by comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
-
 ### Students with Disabilities
 
 Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor.  Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at [accesscenter@k-state.edu](mailto:accesscenter@k-state.edu), 785-532-6441; for K-State Polytechnic campus, contact Julie Rowe, Diversity, Inclusion and Access Coordinator, at [jarowe@ksu.edu](mailto:jarowe@ksu.edu) or call 785-826-2971.

@@ -27,7 +27,7 @@ At K-State, faculty and staff are committed to creating and maintaining an inclu
 
 Faculty and staff are committed to promoting equity and believe the success of an inclusive learning environment relies on the participation, support, and understanding of all students. Students are encouraged to share their views and lived experiences as they relate to the course or their course experience, while recognizing they are doing so in a learning environment in which all are expected to engage with respect to honor the rights, safety, and dignity of others in keeping with the (K-State Principles of Community)[https://www.k-state.edu/about/values/community/].
 
-If you feel uncomfortable because of comments or behavior encountered in this class, you may bring it to the attention of your instructor, advisors, and/or mentors. If you have questions about how to proceed with a confidential process to resolve concerns, please contact the Student Ombudsperson Office. Violations of the student code of conduct can be reported [here](https://www.k-state.edu/sga/judicial/student-code-of-conduct.html). If you experience bias or discrimination, it can be reported [here](https://www.k-state.edu/report/discrimination/).
+If you feel uncomfortable because of comments or behavior encountered in this class, you may bring it to the attention of your instructor, advisors, and/or mentors. If you have questions about how to proceed with a confidential process to resolve concerns, please contact the Student Ombudsperson Office. Violations of the [student code of conduct](https://www.k-state.edu/sga/judicial/student-code-of-conduct.html) can be reported [here](https://www.k-state.edu/sga/judicial/student-code-of-conduct.html). If you experience bias or discrimination, it can be reported [here](https://www.k-state.edu/report/discrimination/).
 
 ### Netiquette
 
@@ -95,6 +95,10 @@ For Kansas State Polytechnic Campus:
 
 * [Kansas State Polytechnic Counseling Services](https://polytechnic.k-state.edu/studentlife/health/counseling.html) offers free and confidential services to assist you to meet these challenges. 
 * [The Kansas State Polytechnic Office of Student Life](https://polytechnic.k-state.edu/studentlife/) can direct you to additional resources.
+
+### University Excused Absences
+
+K-State has a [University Excused Absence policy (Section F62)](https://www.k-state.edu/provost/universityhb/fhsecf.html). Class absence(s) will be handled between the instructor and the student unless there are other university offices involved. For university excused absences, instructors shall provide the student the opportunity to make up missed assignments, activities, and/or attendance specific points that contribute to the course grade, unless they decide to excuse those missed assignments from the student’s course grade. Please see the policy for a complete list of university excused absences and how to obtain one. Students are encouraged to contact their instructor regarding their absences.
 
 ### Copyright Notice
 
