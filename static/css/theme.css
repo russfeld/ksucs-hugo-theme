@@ -1350,4 +1350,9 @@ ol  p, ul p {
     margin: 0.5rem 0;
 }
 
+/* mermaid abstract classes */
+.abstract .classTitle {
+    font-style: italic;
+}
+
   /* russfeld */
