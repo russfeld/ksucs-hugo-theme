@@ -1,4 +1,8 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
+{{- if eq (.Page.Scratch.Get "output-youtube") "link" -}}
+<p>Review Quiz Omitted</p>
+{{- else -}}
 <div class='quizdown'>
   {{ .Inner }}
 </div>
+{{- end -}}

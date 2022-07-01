@@ -1,0 +1,140 @@
+
+<!-- https://discourse.gohugo.io/t/generate-hugo-website-as-a-pdf/22855/6 -->
+{{ partial "header.html" . }}
+
+
+	{{ $currentNodeAll := . }}
+	  
+	
+	<div>
+		<ul>
+			{{if eq .Site.Params.ordersectionsby "title"}}
+			  {{range .Site.Home.Sections.ByTitle}}
+			  {{ template "all-tree-nav" dict "sect" . "currentNodeAll" $currentNodeAll}}
+			  {{end}}
+			{{else}}
+			  {{range .Site.Home.Sections.ByWeight}}
+			  {{ template "all-tree-nav" dict "sect" . "currentNodeAll" $currentNodeAll}}
+			  {{end}}
+			{{end}}
+		</ul>
+	</div>
+
+	<div>
+			{{if eq .Site.Params.ordersectionsby "title"}}
+			  {{range .Site.Home.Sections.ByTitle}}
+			  {{ template "all-content" dict "sect" . "currentNodeAll" $currentNodeAll}}
+			  {{end}}
+			{{else}}
+			  {{range .Site.Home.Sections.ByWeight}}
+			  {{ template "all-content" dict "sect" . "currentNodeAll" $currentNodeAll}}
+			  {{end}}
+			{{end}}
+
+	</div>
+
+	<!-- templates -->
+	{{ define "all-tree-nav" }}
+	{{ $currentNodeAll := .currentNodeAll }}
+	{{ $currentFileUniqueID := "" }}
+	{{ with $currentNodeAll.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }}
+	 {{with .sect}}
+	  {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+		{{safeHTML .Params.head}}
+		<li>
+		  <a href="#{{ substr .RelPermalink 1 -1 }}">
+			  {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+		  </a>
+		  <!-- {{ $numberOfPages := (add (len .Pages) (len .Sections)) }} -->
+		  {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
+		  {{ if ne $numberOfPages 0 }}
+			<ul>
+			  {{ $currentNodeAll.Scratch.Set "pages1" .Pages }}
+			  {{ if .Sections}}
+				{{ $currentNodeAll.Scratch.Set "pages1" (.Pages | union .Sections) }}
+			  {{end}}
+			  {{ $pages := ($currentNodeAll.Scratch.Get "pages1") }}
+	
+			{{if eq .Site.Params.ordersectionsby "title"}}
+			  {{ range $pages.ByTitle }}
+				{{ if and .Params.hidden (not $.showhidden) }}
+				{{else}}
+				{{ template "all-tree-nav" dict "sect" . "currentNodeAll" $currentNodeAll }}
+				{{end}}
+			  {{ end }}
+			{{else}}
+			  {{ range $pages.ByWeight }}
+				{{ if and .Params.hidden (not $.showhidden) }}
+				{{else}}
+				{{ template "all-tree-nav" dict "sect" . "currentNodeAll" $currentNodeAll }}
+				{{end}}
+			  {{ end }}
+			{{end}}
+			</ul>
+		  {{ end }}
+		</li>
+	  {{else}}
+		{{ if not .Params.Hidden }}
+		  <li>
+			<a href="#{{ substr .RelPermalink 1 -1 }}">
+			{{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+			</a>
+		</li>
+		 {{ end }}
+	  {{end}}
+	 {{ end }}
+	{{ end }}
+	
+	{{ define "all-content" }}
+	{{ $currentNodeAll := .currentNodeAll }}
+	{{ $currentFileUniqueID := "" }}
+	{{ with $currentNodeAll.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }}
+	 {{with .sect}}
+	  {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+		{{safeHTML .Params.head}}
+			<h2 id="{{ substr .RelPermalink 1 -1 }}">{{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}</h2>
+			<p style=""><a href="{{ .Permalink }}">{{ .Permalink }}</a> - {{ .Lastmod }}</p>
+			{{ .Scratch.Set "output-youtube" "link" }}
+			{{ .RawContent | .RenderString }}
+			{{ .Scratch.Delete "output-youtube" }}
+		  <!-- {{ $numberOfPages := (add (len .Pages) (len .Sections)) }} -->
+		  {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
+		  {{ if ne $numberOfPages 0 }}
+			<div>
+			  {{ $currentNodeAll.Scratch.Set "pages2" .Pages }}
+			  {{ if .Sections}}
+				{{ $currentNodeAll.Scratch.Set "pages2" (.Pages | union .Sections) }}
+			  {{end}}
+			  {{ $pages := ($currentNodeAll.Scratch.Get "pages2") }}
+	
+			{{if eq .Site.Params.ordersectionsby "title"}}
+			  {{ range $pages.ByTitle }}
+				{{ if and .Params.hidden (not $.showhidden) }}
+				{{else}}
+				{{ template "all-content" dict "sect" . "currentNodeAll" $currentNodeAll }}
+				{{end}}
+			  {{ end }}
+			{{else}}
+			  {{ range $pages.ByWeight }}
+				{{ if and .Params.hidden (not $.showhidden) }}
+				{{else}}
+				{{ template "all-content" dict "sect" . "currentNodeAll" $currentNodeAll }}
+				{{end}}
+			  {{ end }}
+			{{end}}
+			</div>
+		  {{ end }}
+		</li>
+	  {{else}}
+		{{ if not .Params.Hidden }}
+			<h2 id="{{ substr .RelPermalink 1 -1 }}">{{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}</h2>
+			<p style=""><a href="{{ .Permalink }}">{{ .Permalink }}</a> - {{ .Lastmod }}</p>
+			{{ .Scratch.Set "output-youtube" "link" }}
+			{{ .RawContent | .RenderString }}
+			{{ .Scratch.Delete "output-youtube" }}
+		 {{ end }}
+	  {{end}}
+	 {{ end }}
+	{{ end }}
+
+{{ partial "footer.html" . }}
