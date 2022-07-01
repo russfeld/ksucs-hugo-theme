@@ -106,6 +106,7 @@
 {{ $currentFileUniqueID := "" }}
 {{ with $currentNode.File }}{{ $currentFileUniqueID = .UniqueID }}{{ end }}
  {{with .sect}}
+  {{- $isSelf := eq .RelPermalink $currentNode.RelPermalink }}
   {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{safeHTML .Params.head}}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
@@ -130,7 +131,7 @@
           {{ end }}
 
       </a>
-    {{ if .IsAncestor $currentNode }}
+    {{ if or (.IsAncestor $currentNode) $isSelf }}
       <!-- {{ $numberOfPages := (add (len .Pages) (len .Sections)) }} -->
       {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
       {{ if ne $numberOfPages 0 }}
