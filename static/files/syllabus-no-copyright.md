@@ -11,7 +11,7 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 **For this course, a violation of the Honor Pledge will result in sanctions such as a 0 on the assignment or an XF in the course, depending on severity. Actively seeking unauthorized aid, such as posting lab assignments on sites such as Chegg or StackOverflow or asking another person to complete your work, even if unsuccessful, will result in an immediate XF in the course.**
 
-The Codio platform can perform automatic plagiarism detection by comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
+We reserve the right to use various platforms that can perform automatic plagiarism detection by tracking changes made to files and comparing submitted projects against other students' submissions and known solutions. That information may be used to determine if plagiarism has taken place.
 
 ### Students with Disabilities
 
