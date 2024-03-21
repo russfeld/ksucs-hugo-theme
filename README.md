@@ -1,3 +1,9 @@
+# DEPRECATED
+
+Use https://github.com/ksu-cs-textbooks/hugo-theme-relearn instead!
+
+---
+
 # K-State CS Hugo Theme
 
 ## [DEMO SITE](https://ksucs-hugo.russfeld.me/)
